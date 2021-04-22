@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Decodificador</title>
+</head>
+<body>
+    <main>
+        <select onchange="changeCipher() "name="" id="selectCipher">
+            <option value="" disabled selected> Escolha uma cifra</option>
+            <option value="caesar">Cifra de Caesar</option>
+            <option value="base64">base64</option>
+
+        </select>
+
+        <form id="radioCod" onchange="codeOrDecode()">
+                       
+            <input type="radio" id="cod" name="codOuDecod" checked="checked" value="cod">
+            <label for="cod">Codificar</label><br>
+            <input type="radio" id="decod" name="codOuDecod"  value="decod">
+            <label for="decod">Decodificar</label><br>
+            
+        </form>
+        <div id="caesar">
+            <input type="number" default="0" id="key" onkeyup="codeOrDecode()" placeholder="Digite a chave"><br>
+            <textarea name="caesar" id="inputCaesar" placeholder="Digite o texto aqui" onkeyup="codeOrDecode()" cols="30" rows="10"></textarea>
+            <div id="CaesarResult"></div>
+        </div>
+        <div id="base64">
+            <textarea name="base64" id="inputBase64" placeholder="Digite o texto aqui" onkeyup="base64CodeNDecode()" cols="30" rows="10"></textarea>
+            <div id="base64Result"></div>
+        </div>
+    </main>
+</body>
+</html>
