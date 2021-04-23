@@ -2,13 +2,13 @@
 // document.getElementById("key").defaultValue = 0;
 function changeCipher(){
     if(document.getElementById("selectCipher").value == "caesar"){
-        document.getElementById("caesar").style.display = "block";
+        document.getElementById("caesar").style.display = "flex";
         document.getElementById("base64").style.display = "none";
         
     }
     else if(document.getElementById("selectCipher").value == "base64"){
         
-        document.getElementById("base64").style.display = "block";
+        document.getElementById("base64").style.display = "flex";
         document.getElementById("caesar").style.display = "none";
 
     }else{
